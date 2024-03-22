@@ -1,0 +1,93 @@
+.home_container {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	.header {
+		width: 100%;
+		height: 50px;
+		padding: 15px;
+		box-sizing: border-box;
+		background: #f2f4f6;
+	}
+	.main {
+		width: 100%;
+		margin: 40px 0;
+		.blockList {
+			display: flex;
+			.block {
+				padding: 15px;
+				margin: 20px;
+				text-align: center;
+				background-color: rgba(111, 188, 240, 0.1);
+				color: #0284ad;
+				border-radius: 15px;
+				min-width: 78px;
+				p {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	.decrypt_container,
+	.verify_container,
+	.sign_container,
+	.setting_container,
+	.accounts_container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		padding: 0 20px;
+		box-sizing: border-box;
+		h2 {
+			font-size: 1rem;
+			padding: 16px 0;
+		}
+		textarea {
+			resize: none;
+		}
+		.title {
+			a {
+				color: rgb(86 104 115 / 1);
+			}
+		}
+	}
+	.setting_container {
+		.item {
+			a {
+				display: block;
+				padding: 12px 4px 18px;
+				color: #000;
+				text-decoration: none;
+				border-bottom: 1px solid #ccc;
+			}
+			.hover:hover {
+				color: #000;
+			}
+		}
+	}
+  .accounts_container{
+    button{
+      background: #fff;
+      border: 1px solid rgb(160 182 195);
+      color:rgb(117 143 158);
+      height: 2.75rem;
+      font-weight: 600;
+    }
+    .account{
+      display: flex;
+      flex-direction: column;
+      gap:12px;
+      color: rgb(117 143 158);
+      font-weight: 600;
+      .address{
+        padding: 20px;
+        border: 1px solid rgb(160 182 195);
+        border-radius: 5px;
+        .icon-copy-template:hover{
+          color:rgb(21 82 123);
+        }
+      }
+    }
+  }
+}

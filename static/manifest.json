@@ -1,0 +1,43 @@
+{
+  "name": "Aleo Wallet",
+  "description": "Aleo Wallet",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": "/images/favicon1.png",
+    "default_title": "打开aleo钱包",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["inpage.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts":[
+    {
+      "matches": ["file://*/*", "http://*/*", "https://*/*"],
+      "js":[
+        "content_script.js"
+      ],
+      "run_at":"document_idle"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "clipboardWrite",
+    "notifications",
+    "scripting",
+    "storage",
+    "unlimitedStorage",
+    "webRequest",
+    "system.display"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}
